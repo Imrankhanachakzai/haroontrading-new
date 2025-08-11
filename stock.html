@@ -8,20 +8,71 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- HEADER -->
   <header>
     <div class="logo">HAROON TRADING合同会社</div>
     <nav>
-      <a href="index.html" data-en="Home" data-jp="ホーム">Home</a>
-      <a href="stock.html" data-en="Stock" data-jp="在庫">Stock</a>
+      <a href="https://imrankhanachakzai.github.io/haroontrading-new/" data-en="Home" data-jp="ホーム">Home</a>
+      <a href="https://imrankhanachakzai.github.io/haroontrading-new/stock.html" data-en="Stock" data-jp="在庫">Stock</a>
       <a href="#" data-en="About" data-jp="会社案内">About</a>
       <a href="#" data-en="Contact" data-jp="お問い合わせ">Contact</a>
       <button id="langToggle">日本語</button>
     </nav>
   </header>
 
+  <!-- FILTER PANEL -->
+  <section class="filter-panel">
+    <h2 data-en="Search Filters" data-jp="検索フィルター">Search Filters</h2>
+    <form id="filterForm">
+      <label>Make</label>
+      <select name="make">
+        <option value="">Any</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Nissan">Nissan</option>
+        <option value="Honda">Honda</option>
+        <option value="Suzuki">Suzuki</option>
+      </select>
+
+      <label>Model</label>
+      <input type="text" name="model" placeholder="e.g. Corolla">
+
+      <label>Year From</label>
+      <input type="number" name="yearFrom" min="1990" max="2025">
+
+      <label>Year To</label>
+      <input type="number" name="yearTo" min="1990" max="2025">
+
+      <label>Price Range (¥)</label>
+      <input type="number" name="priceMin" placeholder="Min">
+      <input type="number" name="priceMax" placeholder="Max">
+
+      <label>Mileage (km)</label>
+      <input type="number" name="mileageMax" placeholder="Max km">
+
+      <label>Transmission</label>
+      <select name="transmission">
+        <option value="">Any</option>
+        <option value="AT">Automatic</option>
+        <option value="MT">Manual</option>
+        <option value="CVT">CVT</option>
+      </select>
+
+      <label>Fuel</label>
+      <select name="fuel">
+        <option value="">Any</option>
+        <option value="Petrol">Petrol</option>
+        <option value="Diesel">Diesel</option>
+        <option value="Hybrid">Hybrid</option>
+        <option value="Electric">Electric</option>
+      </select>
+
+      <button type="submit">Apply Filters</button>
+    </form>
+  </section>
+
+  <!-- SORTING -->
   <section class="stock-header">
     <h1 data-en="Available Stock" data-jp="在庫一覧">Available Stock</h1>
-
     <div class="sort-controls">
       <label data-en="Sort by:" data-jp="並び替え:">Sort by:</label>
       <select id="sortSelect">
@@ -35,45 +86,34 @@
     </div>
   </section>
 
+  <!-- STOCK GRID -->
   <section class="stock-grid" id="stockGrid">
-    <!-- Dummy auction-style listings -->
-    <div class="car-card" data-price="1200000" data-year="2020" data-mileage="35000">
-      <img src="https://i.ibb.co/9wKjY8b/car1.jpg" alt="Toyota Aqua"/>
+    <div class="car-card" data-make="Toyota" data-model="Aqua" data-price="1200000" data-year="2020" data-mileage="35000" data-transmission="AT" data-fuel="Hybrid">
+      <img src="https://i.ibb.co/9wKjY8b/car1.jpg" alt="Toyota Aqua">
       <h3>Toyota Aqua 2020</h3>
-      <p>¥1,200,000 • 35,000km</p>
+      <p>¥1,200,000 • 35,000km • AT • Hybrid</p>
     </div>
 
-    <div class="car-card" data-price="980000" data-year="2019" data-mileage="45000">
-      <img src="https://i.ibb.co/NFtzg4k/car2.jpg" alt="Nissan Note"/>
+    <div class="car-card" data-make="Nissan" data-model="Note" data-price="980000" data-year="2019" data-mileage="45000" data-transmission="CVT" data-fuel="Petrol">
+      <img src="https://i.ibb.co/NFtzg4k/car2.jpg" alt="Nissan Note">
       <h3>Nissan Note 2019</h3>
-      <p>¥980,000 • 45,000km</p>
+      <p>¥980,000 • 45,000km • CVT • Petrol</p>
     </div>
 
-    <div class="car-card" data-price="2500000" data-year="2018" data-mileage="60000">
-      <img src="https://i.ibb.co/Zm2TZ5v/car3.jpg" alt="Toyota Crown"/>
+    <div class="car-card" data-make="Toyota" data-model="Crown" data-price="2500000" data-year="2018" data-mileage="60000" data-transmission="AT" data-fuel="Petrol">
+      <img src="https://i.ibb.co/Zm2TZ5v/car3.jpg" alt="Toyota Crown">
       <h3>Toyota Crown 2018</h3>
-      <p>¥2,500,000 • 60,000km</p>
+      <p>¥2,500,000 • 60,000km • AT • Petrol</p>
     </div>
 
-    <div class="car-card" data-price="1500000" data-year="2021" data-mileage="20000">
-      <img src="https://i.ibb.co/cgTzMfs/car4.jpg" alt="Honda Fit"/>
+    <div class="car-card" data-make="Honda" data-model="Fit" data-price="1500000" data-year="2021" data-mileage="20000" data-transmission="AT" data-fuel="Petrol">
+      <img src="https://i.ibb.co/cgTzMfs/car4.jpg" alt="Honda Fit">
       <h3>Honda Fit 2021</h3>
-      <p>¥1,500,000 • 20,000km</p>
-    </div>
-
-    <div class="car-card" data-price="1980000" data-year="2022" data-mileage="12000">
-      <img src="https://i.ibb.co/0JtG8m7/placeholder-car.jpg" alt="Toyota Yaris"/>
-      <h3>Toyota Yaris 2022</h3>
-      <p>¥1,980,000 • 12,000km</p>
-    </div>
-
-    <div class="car-card" data-price="820000" data-year="2017" data-mileage="72000">
-      <img src="https://i.ibb.co/0JtG8m7/placeholder-car.jpg" alt="Suzuki Alto"/>
-      <h3>Suzuki Alto 2017</h3>
-      <p>¥820,000 • 72,000km</p>
+      <p>¥1,500,000 • 20,000km • AT • Petrol</p>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 HAROON TRADING合同会社 | 法人番号 4030003021870</p>
     <p>埼玉県戸田市新曽南１丁目１－１９ 宇田川荘２０５号室 | 📞 048-212-0423 | 📧 haroontradinghk@gmail.com</p>
