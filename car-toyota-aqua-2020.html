@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Toyota Aqua 2020 - HAROON TRADING合同会社</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
+  <style>
+    .car-details {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      background: #1a1a1a;
+      border-radius: 6px;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    table, th, td {
+      border: 1px solid #444;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background: #222;
+    }
+    .enquiry-btn, .whatsapp-btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background: orange;
+      color: black;
+      font-weight: bold;
+      border-radius: 4px;
+      text-decoration: none;
+      margin-right: 10px;
+    }
+    .whatsapp-btn {
+      background: #25D366;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="logo">HAROON TRADING合同会社</div>
+    <nav>
+      <a href="https://imrankhanachakzai.github.io/haroontrading-new/" data-en="Home" data-jp="ホーム">Home</a>
+      <a href="https://imrankhanachakzai.github.io/haroontrading-new/stock.html" data-en="Stock" data-jp="在庫">Stock</a>
+      <a href="#" data-en="About" data-jp="会社案内">About</a>
+      <a href="#" data-en="Contact" data-jp="お問い合わせ">Contact</a>
+      <button id="langToggle">日本語</button>
+    </nav>
+  </header>
+
+  <!-- CAR DETAILS -->
+  <section class="car-details">
+    <h1>Toyota Aqua 2020</h1>
+    <div class="gallery">
+      <img src="https://i.ibb.co/9wKjY8b/car1.jpg" alt="Toyota Aqua front view">
+      <img src="https://i.ibb.co/9wKjY8b/car1.jpg" alt="Toyota Aqua side view">
+      <img src="https://i.ibb.co/9wKjY8b/car1.jpg" alt="Toyota Aqua interior">
+    </div>
+
+    <table>
+      <tr><th>Make</th><td>Toyota</td></tr>
+      <tr><th>Model</th><td>Aqua</td></tr>
+      <tr><th>Year</th><td>2020</td></tr>
+      <tr><th>Price</th><td>¥1,200,000</td></tr>
+      <tr><th>Mileage</th><td>35,000 km</td></tr>
+      <tr><th>Transmission</th><td>Automatic</td></tr>
+      <tr><th>Fuel</th><td>Hybrid</td></tr>
+      <tr><th>Color</th><td>White</td></tr>
+      <tr><th>Auction Grade</th><td>4.5</td></tr>
+      <tr><th>Location</th><td>Japan</td></tr>
+    </table>
+
+    <a href="mailto:haroontradinghk@gmail.com?subject=Enquiry%20-%20Toyota%20Aqua%202020" class="enquiry-btn">Enquire Now</a>
+    <a href="https://wa.me/819029023000?text=Hello%2C%20I%20am%20interested%20in%20the%20Toyota%20Aqua%202020" target="_blank" class="whatsapp-btn">WhatsApp</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 HAROON TRADING合同会社 | 法人番号 4030003021870</p>
+    <p>埼玉県戸田市新曽南１丁目１－１９ 宇田川荘２０５号室 | 📞 048-212-0423 | 📧 haroontradinghk@gmail.com</p>
+  </footer>
+</body>
+</html>
