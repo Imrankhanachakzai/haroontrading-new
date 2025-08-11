@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HAROON TRADING合同会社 - Stock</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="logo">HAROON TRADING合同会社</div>
+    <nav>
+      <a href="index.html" data-en="Home" data-jp="ホーム">Home</a>
+      <a href="stock.html" data-en="Stock" data-jp="在庫">Stock</a>
+      <a href="#" data-en="About" data-jp="会社案内">About</a>
+      <a href="#" data-en="Contact" data-jp="お問い合わせ">Contact</a>
+      <button id="langToggle">日本語</button>
+    </nav>
+  </header>
+
+  <section class="stock-header">
+    <h1 data-en="Available Stock" data-jp="在庫一覧">Available Stock</h1>
+
+    <div class="sort-controls">
+      <label data-en="Sort by:" data-jp="並び替え:">Sort by:</label>
+      <select id="sortSelect">
+        <option value="priceAsc"  data-en="Price: Low to High"  data-jp="価格: 安い順">Price: Low to High</option>
+        <option value="priceDesc" data-en="Price: High to Low"  data-jp="価格: 高い順">Price: High to Low</option>
+        <option value="yearDesc"  data-en="Year: Newest First" data-jp="年式: 新しい順">Year: Newest First</option>
+        <option value="yearAsc"   data-en="Year: Oldest First" data-jp="年式: 古い順">Year: Oldest First</option>
+        <option value="mileageAsc" data-en="Mileage: Low to High" data-jp="走行距離: 少ない順">Mileage: Low to High</option>
+        <option value="mileageDesc" data-en="Mileage: High to Low" data-jp="走行距離: 多い順">Mileage: High to Low</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="stock-grid" id="stockGrid">
+    <!-- Dummy auction-style listings -->
+    <div class="car-card" data-price="1200000" data-year="2020" data-mileage="35000">
+      <img src="https://i.ibb.co/9wKjY8b/car1.jpg" alt="Toyota Aqua"/>
+      <h3>Toyota Aqua 2020</h3>
+      <p>¥1,200,000 • 35,000km</p>
+    </div>
+
+    <div class="car-card" data-price="980000" data-year="2019" data-mileage="45000">
+      <img src="https://i.ibb.co/NFtzg4k/car2.jpg" alt="Nissan Note"/>
+      <h3>Nissan Note 2019</h3>
+      <p>¥980,000 • 45,000km</p>
+    </div>
+
+    <div class="car-card" data-price="2500000" data-year="2018" data-mileage="60000">
+      <img src="https://i.ibb.co/Zm2TZ5v/car3.jpg" alt="Toyota Crown"/>
+      <h3>Toyota Crown 2018</h3>
+      <p>¥2,500,000 • 60,000km</p>
+    </div>
+
+    <div class="car-card" data-price="1500000" data-year="2021" data-mileage="20000">
+      <img src="https://i.ibb.co/cgTzMfs/car4.jpg" alt="Honda Fit"/>
+      <h3>Honda Fit 2021</h3>
+      <p>¥1,500,000 • 20,000km</p>
+    </div>
+
+    <div class="car-card" data-price="1980000" data-year="2022" data-mileage="12000">
+      <img src="https://i.ibb.co/0JtG8m7/placeholder-car.jpg" alt="Toyota Yaris"/>
+      <h3>Toyota Yaris 2022</h3>
+      <p>¥1,980,000 • 12,000km</p>
+    </div>
+
+    <div class="car-card" data-price="820000" data-year="2017" data-mileage="72000">
+      <img src="https://i.ibb.co/0JtG8m7/placeholder-car.jpg" alt="Suzuki Alto"/>
+      <h3>Suzuki Alto 2017</h3>
+      <p>¥820,000 • 72,000km</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 HAROON TRADING合同会社 | 法人番号 4030003021870</p>
+    <p>埼玉県戸田市新曽南１丁目１－１９ 宇田川荘２０５号室 | 📞 048-212-0423 | 📧 haroontradinghk@gmail.com</p>
+  </footer>
+</body>
+</html>
