@@ -1,99 +1,196 @@
+/* ===== GENERAL ===== */
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: #fff;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #111;
+  color: #fff;
 }
 
 header {
-    background: #000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    position: sticky;
-    top: 0;
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header .logo {
-    font-weight: bold;
-    font-size: 20px;
-    color: orange;
+  font-weight: bold;
+  font-size: 20px;
+  color: orange;
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
-    margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  margin: 0 10px;
 }
 
 nav a:hover {
-    color: orange;
+  color: orange;
 }
 
 #langToggle {
-    background: orange;
-    border: none;
-    color: black;
-    padding: 5px 10px;
-    cursor: pointer;
+  background: orange;
+  border: none;
+  color: black;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
+/* ===== HERO SECTION ===== */
 .hero {
-    background: url('https://i.ibb.co/LvZkD9V/car-hero.jpg') center/cover no-repeat;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+  background: url('https://i.ibb.co/LvZkD9V/car-hero.jpg') center/cover no-repeat;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 28px;
+  animation: fadeIn 1s ease-in-out;
 }
 
 .search-section {
-    background: #222;
-    padding: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
+  background: #222;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-.search-section input, .search-section button {
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
+.search-section input, 
+.search-section button {
+  padding: 8px;
+  border: none;
+  border-radius: 4px;
 }
 
 .search-section button {
-    background: orange;
-    cursor: pointer;
+  background: orange;
+  cursor: pointer;
 }
 
+/* ===== FILTER PANEL ===== */
+.filter-panel {
+  background: #1a1a1a;
+  padding: 15px;
+  max-width: 300px;
+  float: left;
+}
+
+.filter-panel h2 {
+  margin-top: 0;
+  color: orange;
+}
+
+.filter-panel label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.filter-panel input,
+.filter-panel select {
+  width: 100%;
+  padding: 6px;
+  margin-top: 3px;
+  background: #222;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 4px;
+}
+
+.filter-panel button {
+  margin-top: 15px;
+  width: 100%;
+  background: orange;
+  border: none;
+  padding: 10px;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* ===== SORTING ===== */
+.stock-header {
+  margin-left: 320px;
+  padding: 15px;
+}
+
+.sort-controls {
+  margin-top: 10px;
+}
+
+.sort-controls select {
+  padding: 5px;
+  background: #222;
+  color: white;
+  border: 1px solid #444;
+  border-radius: 4px;
+}
+
+/* ===== CAR GRID ===== */
 .stock-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 15px;
-    padding: 20px;
+  margin-left: 320px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
 }
 
 .car-card {
-    background: #222;
-    border-radius: 5px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+  background: #222;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .car-card img {
-    width: 100%;
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.car-card h3 {
+  margin: 10px;
+  font-size: 18px;
+  color: orange;
+}
+
+.car-card p {
+  margin: 0 10px 10px;
+  color: #ddd;
 }
 
 .car-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0px 0px 15px orange;
+  transform: scale(1.03);
+  box-shadow: 0px 0px 15px orange;
 }
 
+/* ===== FOOTER ===== */
 footer {
-    background: #000;
-    text-align: center;
-    padding: 15px;
+  background: #000;
+  text-align: center;
+  padding: 15px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .filter-panel {
+    max-width: 100%;
+    float: none;
+    margin-bottom: 20px;
+  }
+  .stock-header,
+  .stock-grid {
+    margin-left: 0;
+  }
 }
